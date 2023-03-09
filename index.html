@@ -1,0 +1,62 @@
+<!DOCTYPE html> <html><head>
+        <title>5.P Starter Code [Abdel]</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #18b4ff;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+</style></head>
+    <body>
+        <div class="title">
+            <h1>What kind of fruit are you!</h1>
+            <input class="question1"> 
+            <img src="https://www.quizony.com/fruit/fruit.png">
+        </div>
+        
+        <div class="questions">
+            <h4> How many times do you eat fruits a day</h4>
+            <input class="question2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqbXmPWeNidLoK3F89T9N2HjZJGoq5rsS8rQHJG8OIjH4jkZK52EzfZ4RIXTg-rwvPzM&amp;usqp=CAU">
+            <h4>Do you prefer to eat fruits in the morning or in the evening </h4>
+            <img src="http://cdn.shopify.com/s/files/1/0394/4087/5687/articles/Best_Time_to_Eat_Fruit.jpg?v=1646387733">
+        </div>
+        <button>Click here!</button>
+        <div class="result">
+1.Apple 
+2.Banana 
+3.blueberry 
+4.peach
+
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector("button");
+var question1 = document.querySelector(".question1");
+var question2 = document.querySelector(".question2");
+
+button.onclick = function () {
+  var Q1 = document.querySelector(".question1").value;
+  var Q2 = document.querySelector(".question2").value;
+  console.log(Q1);
+  console.log(Q2);
+
+  if (Q1 <= 2 && Q2 === "Morning") {
+    document.querySelector(".result").innerHTML = "    You have  " + Q1 + " fruits  " + "   and you prefer " + Q2 + "   This means you are a Apple ";
+  } else if (Q1 > 4 && Q2 === "evening") {
+    document.querySelector(".result").innerHTML = "  you have   " + Q1 + " fruits  " + "   and you prefer " + Q2 + "   This means you are a Banana ";
+  } else if (Q1 <= 2 && Q2 === "evening") {
+    document.querySelector(".result").innerHTML = "you have   " + Q1 + " fruits  " + "   and you prefer " + Q2 + "   This means you are a blueberry";
+  } else if (Q1 > 4 && Q2 === "Morning") {
+    document.querySelector(".result").innerHTML = "you have   " + Q1 + " fruits  " + "   and you prefer " + Q2 + "   This means you are a peach";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInF1ZXN0aW9uMSIsInF1ZXN0aW9uMiIsIm9uY2xpY2siLCJRMSIsInZhbHVlIiwiUTIiLCJjb25zb2xlIiwibG9nIiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxNQUFNLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFiO0FBQ0EsSUFBSUMsU0FBUyxHQUFHRixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsQ0FBaEI7QUFDQSxJQUFJRSxTQUFTLEdBQUdILFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixDQUFoQjs7QUFFQUYsTUFBTSxDQUFDSyxPQUFQLEdBQWlCLFlBQVc7QUFDM0IsTUFBSUMsRUFBRSxHQUNQTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsRUFBcUNLLEtBRHBDO0FBRUksTUFBSUMsRUFBRSxHQUNYUCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsRUFBcUNLLEtBRGhDO0FBR0RFLEVBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZSixFQUFaO0FBQ0FHLEVBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZRixFQUFaOztBQUVDLE1BQUlGLEVBQUUsSUFBSSxDQUFOLElBQVdFLEVBQUUsS0FBSyxTQUF0QixFQUFtQztBQUNoQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUyxTQUFsQyxHQUE0QyxtQkFBcUJMLEVBQXJCLEdBQTBCLFdBQTFCLEdBQXdDLG9CQUF4QyxHQUErREUsRUFBL0QsR0FBcUUsZ0NBQWpIO0FBQ0gsR0FGQSxNQUdHLElBQUlGLEVBQUUsR0FBRyxDQUFMLElBQVVFLEVBQUUsS0FBSyxTQUFyQixFQUFpQztBQUNqQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUyxTQUFsQyxHQUE0QyxrQkFBa0JMLEVBQWxCLEdBQXVCLFdBQXZCLEdBQXFDLG9CQUFyQyxHQUE0REUsRUFBNUQsR0FBa0UsaUNBQTlHO0FBQ0gsR0FGRyxNQUlDLElBQUlGLEVBQUUsSUFBSSxDQUFOLElBQVdFLEVBQUUsS0FBSyxTQUF0QixFQUFrQztBQUNuQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUyxTQUFsQyxHQUE2QyxnQkFBZ0JMLEVBQWhCLEdBQXFCLFdBQXJCLEdBQW1DLG9CQUFuQyxHQUEwREUsRUFBMUQsR0FBZ0UsbUNBQTdHO0FBQ0gsR0FGSSxNQUlDLElBQUlGLEVBQUUsR0FBRyxDQUFMLElBQVVFLEVBQUUsS0FBSyxTQUFyQixFQUFpQztBQUNuQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUyxTQUFsQyxHQUE0QyxnQkFBZ0JMLEVBQWhCLEdBQXFCLFdBQXJCLEdBQW1DLG9CQUFuQyxHQUEwREUsRUFBMUQsR0FBZ0UsK0JBQTVHO0FBQ0g7QUFFSixDQXhCRCIsInNvdXJjZXNDb250ZW50IjpbImxldCBidXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiYnV0dG9uXCIpO1xubGV0IHF1ZXN0aW9uMSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24xXCIpO1xubGV0IHF1ZXN0aW9uMiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24yXCIpO1xuXG5idXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xuIGxldCBRMT1cbmRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24xXCIpLnZhbHVlO1xuICAgICBsZXQgUTI9XG5kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uMlwiKS52YWx1ZTtcbiAgICBcbiAgICBjb25zb2xlLmxvZyhRMSk7XG4gICAgY29uc29sZS5sb2coUTIpO1xuICAgIFxuICAgICBpZiAoUTEgPD0gMiAmJiBRMiA9PT0gXCJNb3JuaW5nXCIgICkgeyBcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPVwiICAgIFlvdSBoYXZlICBcIiAgICsgUTEgKyBcIiBmcnVpdHMgIFwiICsgXCIgICBhbmQgeW91IHByZWZlciBcIiArIFEyICsgIFwiICAgVGhpcyBtZWFucyB5b3UgYXJlIGEgQXBwbGUgXCI7IFxuICAgIH1cbiAgIGVsc2UgaWYgKFExID4gNCAmJiBRMiA9PT0gXCJldmVuaW5nXCIgKSB7IFxuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUw9XCIgIHlvdSBoYXZlICAgXCIgKyBRMSArIFwiIGZydWl0cyAgXCIgKyBcIiAgIGFuZCB5b3UgcHJlZmVyIFwiICsgUTIgKyAgXCIgICBUaGlzIG1lYW5zIHlvdSBhcmUgYSBCYW5hbmEgXCI7XG4gICAgfSBcbiAgIFxuICAgIGVsc2UgaWYgKFExIDw9IDIgJiYgUTIgPT09IFwiZXZlbmluZ1wiICkgeyBcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPSBcInlvdSBoYXZlICAgXCIgKyBRMSArIFwiIGZydWl0cyAgXCIgKyBcIiAgIGFuZCB5b3UgcHJlZmVyIFwiICsgUTIgKyAgXCIgICBUaGlzIG1lYW5zIHlvdSBhcmUgYSBibHVlYmVycnlcIjtcbiAgICB9XG4gICAgXG4gICAgIGVsc2UgaWYgKFExID4gNCAmJiBRMiA9PT0gXCJNb3JuaW5nXCIgKSB7IFxuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUw9XCJ5b3UgaGF2ZSAgIFwiICsgUTEgKyBcIiBmcnVpdHMgIFwiICsgXCIgICBhbmQgeW91IHByZWZlciBcIiArIFEyICsgIFwiICAgVGhpcyBtZWFucyB5b3UgYXJlIGEgcGVhY2hcIjtcbiAgICB9XG4gICAgXG59O1xuXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAiXX0=</script></body></html>
